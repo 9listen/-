@@ -1,0 +1,25 @@
+<template>
+  <div>
+    <!--🌸904 gutter是两个col的距离 -->
+    <el-row :gutter="10">
+      <el-col :span="12">
+        <Search />
+      </el-col>
+      <el-col :span="12">
+        <Category />
+      </el-col>
+    </el-row>
+  </div>
+</template>
+
+<script>
+import Search from './Search'
+import Category from './Category'
+export default {
+  name: '',
+  components: { Search, Category }
+}
+</script>
+
+<style scoped>
+</style>

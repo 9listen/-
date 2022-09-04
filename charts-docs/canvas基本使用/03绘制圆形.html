@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+     <canvas width="600" height="400"></canvas>
+</body>
+</html>
+<script>
+// 获取DOM
+const canvas = document.querySelector('canvas')
+// 获取上下文
+const ctx = canvas.getContext('2d')
+// 绘制圆形arc(x, y, radius, starAngle, endAngle, anticlockwise是否逆时针)
+// 绘制圆形的方法：x、y,r,起始弧度、结束的弧度,是否逆时针绘制
+ctx.beginPath()
+ctx.arc(300, 200, 100, 0, 2 * Math.PI, true)
+ctx.stroke()// 🌸 绘制圆形
+// 设置填充颜色
+ctx.fillStyle = 'pink'
+ctx.fill()
+// 🟡360°=2 * PI *弧度
+//
+ctx.beginPath()
+ctx.arc(100, 200, 50, 0, 1, true)// 弧
+ctx.stroke()
+</script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+     <canvas width="800" height="420"></canvas>
+</body>
+</html>
+<script>
+// 获取节点
+const canvas = document.querySelector('canvas')
+// 获取上下文
+const ctx = canvas.getContext('2d')
+// 绘制文本--左上角的文本
+ctx.font = '16px 微软雅黑'
+ctx.fillText('数据可视化', 50, 80)
+// 绘制线段
+ctx.moveTo(100, 100)
+ctx.lineTo(100, 400)
+ctx.lineTo(700, 400)
+ctx.stroke()
+
+// 绘制其他的线段
+ctx.moveTo(100, 100)
+ctx.lineTo(700, 100)
+ctx.fillText('150', 70, 110)
+
+ctx.moveTo(100, 160)
+ctx.lineTo(700, 160)
+ctx.fillText('120', 70, 170)
+
+ctx.moveTo(100, 220)
+ctx.lineTo(700, 220)
+ctx.fillText('90', 70, 230)
+
+ctx.moveTo(100, 280)
+ctx.lineTo(700, 280)
+ctx.fillText('60', 70, 290)
+
+ctx.moveTo(100, 340)
+ctx.lineTo(700, 340)
+ctx.fillText('30', 70, 350)
+ctx.fillText('0', 70, 400)
+ctx.stroke()
+// 🌼 绘制水平轴底部的线段
+ctx.moveTo(250, 400)
+ctx.lineTo(250, 410)
+// 底部的文字
+ctx.fillText('食品', 170, 415)
+
+ctx.moveTo(400, 400)
+ctx.lineTo(400, 410)
+ctx.fillText('数码', 310, 415)
+ctx.moveTo(550, 400)
+ctx.lineTo(550, 410)
+ctx.fillText('服饰', 450, 415)
+ctx.fillText('箱包', 600, 415)
+ctx.stroke()
+
+// 绘制矩形
+ctx.fillStyle = 'red'
+ctx.fillRect(120, 200, 100, 200)
+</script>

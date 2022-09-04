@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 800px;
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 🌸svg双闭合标签：默认宽度与高度300 * 150  svg绘制图形务必在svg标签内部使用绘制图形 -->
+    <svg class="box">
+        <!-- x1 y1第一个点的坐标  x2 y2 第二个点的坐标 -->
+        <line x1="300" y1="300" x2="300" y2="0" stroke="black"></line>
+        <line x1="300" y1="300" x2="0" y2="300" stroke="black"></line>
+        <line x1="100" y1="100" x2="200" y2="200" stroke="red"></line>
+        <line x1="100" y1="200" x2="200" y2="100" stroke="red"></line>
+        <!-- 🌸绘制折线:可以多个点，多个点的时候，最好带有逗号 -->
+        <polyline points="300 300, 50 100, 120 400,20,20" fill-opacity="0" stroke="cyan"></polyline>
+        <polyline points="40 600, 0 500,30 700,100 0" stroke="orange"></polyline>
+        <!-- 绘制矩形 -->
+        <!-- fill属性：设置填充颜色的  fill-opacity设置填充颜色的透明度  stroke：线的颜色 -->
+        <rect x="400" y="400" width="150" height="50" fill="pink"></rect>
+        <!-- 绘制圆形 -->
+        <circle cx='370' cy='95' r='50' style='stroke:cyan; fill:orange'></circle>
+        <!-- 绘制圆形|椭圆 -->
+        <ellipse cx="500" cy="500" rx="100" ry="50" style="fill:rgb(227, 177, 177);"></ellipse>
+        <!-- 多边 -->
+        <polygon points="480 100, 550 150, 650 80,620 0" stroke="red" fill-opacity="0" />
+        <!-- 绘制任意图形 -->
+        <path fill-opacity="0" stroke="skyblue" d="
+  M 10  10
+  L 20 400
+  L 30 120
+  L 40 66
+  L 50 99
+  L 60 120
+  L 70 99
+  Z
+"></path>
+    </svg>
+</body>
+
+</html>

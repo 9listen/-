@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="600" height="400"></canvas>
+  </body>
+</html>
+<script>
+// 获取DOM节点
+const canvas = document.querySelector('canvas')
+// 获取上下文
+const ctx = canvas.getContext('2d')
+// 绘制矩形第一种方式:参数为x、y、w、h   🌸strokeRect(x距离x轴, y是距离顶部, width, height) 绘制线条的矩形
+// 这种的矩形没有办法设置填充颜色
+ctx.strokeRect(100, 200, 100, 200)
+// 第二种方式绘制矩形   fillRect(x, y, width, height) 绘制填充颜色的矩形
+// 填充颜色可以替换
+// 绘制图形🔥之前🔥设置填充颜色
+ctx.fillStyle = 'red'
+ctx.fill()
+ctx.fillRect(300, 200, 100, 200)
+
+</script>
